@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Brodey\Repositories\DOTS_Playground" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="Dots" t="Include">
+            <e p="Docs" t="Include">
+              <e p="DOTS.txt" t="Include" />
+              <e p="ECS.cs" t="Include" />
+              <e p="JobsTest.cs" t="Include" />
+            </e>
+            <e p="Tutorial" t="Include">
+              <e p="Components" t="Include">
+                <e p="LevelComponent.cs" t="Include" />
+                <e p="MoveDirection.cs" t="Include" />
+                <e p="MoveSpeedComponent.cs" t="Include" />
+              </e>
+              <e p="Systems" t="Include">
+                <e p="LevelUpSystem.cs" t="Include" />
+                <e p="MovementSystem.cs" t="Include" />
+                <e p="PlayerMovementSystem.cs" t="Include" />
+              </e>
+              <e p="Testing.cs" t="Include" />
+              <e p="TestJobs.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="DOTS_Playground.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+    <e p="C:\Users\bodid\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\bodid\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_DOTS_Playground.-1377819864.00" t="ExcludeRecursive" />
+  </component>
+</project>

@@ -37,7 +37,16 @@ public class PlayerMovementSystemTwo : JobComponentSystem
       
         Entities.ForEach((ref Translation translation, in MoveDirection moveDirection) =>
         {
-            // translation.Value.x += moveDirection.value * deltaTime;
+            //translation.Value.x += moveDirection.value * deltaTime;
+            
+            if (translation.Value.y > 5)
+            {
+                translation.Value.y -= moveDirection.value * deltaTime;
+            }
+            if (translation.Value.y < -5)
+            {
+                translation.Value.y += moveDirection.value * deltaTime;
+            }
         }).Run();
 
         return default;

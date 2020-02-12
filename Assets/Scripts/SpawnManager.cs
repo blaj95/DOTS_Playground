@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Rendering;
@@ -11,7 +12,8 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private Material unitMaterial, targetMaterial;
     [SerializeField] private Mesh quadMesh;
     public int unitCount;
-    
+    private float spawnTargetTimer;
+
     private static EntityManager entityManager;
     
     // Start is called before the first frame update
@@ -25,11 +27,24 @@ public class SpawnManager : MonoBehaviour
         }
        
 
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 15; i++)
         {
             SpawnTargetEntity();
         }
         
+    }
+
+    private void Update()
+    {
+        spawnTargetTimer -= Time.deltaTime;
+        if (spawnTargetTimer < 0)
+        {
+            spawnTargetTimer = .2f;
+            for (int i = 0; i < 6; i++)
+            {
+                SpawnTargetEntity();   
+            }
+        }
     }
 
     void SpawnUnitEntity()
@@ -62,3 +77,29 @@ public class SpawnManager : MonoBehaviour
 public struct Unit: IComponentData{}
 // Target Tag
 public struct Target: IComponentData{}
+// Used to signal a Unit has a target
+public struct HasTarget : IComponentData
+{
+    public Entity TargetEntity;
+}
+
+public struct IsTargeted: IComponentData{}
+
+// Handle Drawing Lines between target and unit
+[BurstCompile]
+public class HasTargetDebug : ComponentSystem
+{
+    protected override void OnUpdate()
+    {
+        Entities.ForEach((Entity entity, ref Translation translation, ref HasTarget hasTarget) =>
+        {
+            if(World.DefaultGameObjectInjectionWorld.EntityManager.Exists(hasTarget.TargetEntity))
+            {
+                Translation targetTranslation =
+                    World.DefaultGameObjectInjectionWorld.EntityManager.GetComponentData<Translation>(
+                        hasTarget.TargetEntity);
+                Debug.DrawLine(translation.Value,targetTranslation.Value);   
+            }
+        });
+    }
+}

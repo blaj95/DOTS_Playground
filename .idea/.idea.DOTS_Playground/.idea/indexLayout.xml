@@ -12,6 +12,7 @@
       <Path>Library/PackageCache/com.unity.entities@0.5.1-preview.11</Path>
       <Path>Library/PackageCache/com.unity.ext.nunit@1.0.0</Path>
       <Path>Library/PackageCache/com.unity.ide.rider@1.1.4</Path>
+      <Path>Library/PackageCache/com.unity.ide.rider@1.2.1</Path>
       <Path>Library/PackageCache/com.unity.ide.vscode@1.1.4</Path>
       <Path>Library/PackageCache/com.unity.jobs@0.2.4-preview.11</Path>
       <Path>Library/PackageCache/com.unity.mathematics@1.1.0</Path>
@@ -34,6 +35,7 @@
       <Path>.idea</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
+      <Path>Temp</Path>
       <Path>obj</Path>
     </explicitExcludes>
   </component>

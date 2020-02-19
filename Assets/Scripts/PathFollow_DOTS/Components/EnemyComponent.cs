@@ -1,4 +1,7 @@
 ﻿using Unity.Entities;
 
 [GenerateAuthoringComponent]
-public struct EnemyComponent : IComponentData {}
+public struct EnemyComponent : IComponentData
+{
+    public int pathIndex;
+}

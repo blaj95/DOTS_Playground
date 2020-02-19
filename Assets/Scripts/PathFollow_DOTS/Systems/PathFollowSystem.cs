@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.Entities;
+using Unity.Jobs;
 using UnityEngine;
 
 public class PathFollowSystem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // protected override JobHandle OnUpdate(JobHandle inputDeps)
+    // {
+    //     Entities.ForEach((Entity enemyEntity, ref EnemyComponent enemyComponent ) =>
+    //     {
+    //         
+    //     }).Schedule();
+    //
+    //     JobHandle handle = new JobHandle();
+    //     return handle;
+    // }
 }

@@ -40,6 +40,7 @@
             <e p="Components" t="Include">
               <e p="EnemyComponent.cs" t="Include" />
               <e p="MarkerComponent.cs" t="Include" />
+              <e p="UserInputData.cs" t="Include" />
             </e>
             <e p="Systems" t="Include">
               <e p="PathFollowSystem.cs" t="Include" />

@@ -26,6 +26,7 @@
               <e p="TestRaycast.cs" t="Include" />
               <e p="TriggerTest.cs" t="Include" />
             </e>
+            <e p="SpawnManager.cs" t="Include" />
             <e p="Systems" t="Include">
               <e p="LevelUpSystem.cs" t="Include" />
               <e p="MovementSystem.cs" t="Include" />
@@ -46,7 +47,15 @@
               <e p="PathFollowSystem.cs" t="Include" />
             </e>
           </e>
-          <e p="SpawnManager.cs" t="Include" />
+          <e p="StateMachine" t="Include">
+            <e p="Begin.cs" t="Include" />
+            <e p="EnemyTurn.cs" t="Include" />
+            <e p="PlayerTurn.cs" t="Include" />
+            <e p="State.cs" t="Include" />
+            <e p="StateMachine.cs" t="Include" />
+            <e p="TurnSelect.cs" t="Include" />
+            <e p="TurnSystem.cs" t="Include" />
+          </e>
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
